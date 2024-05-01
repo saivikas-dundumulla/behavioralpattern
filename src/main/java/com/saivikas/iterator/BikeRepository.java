@@ -16,7 +16,7 @@ public class BikeRepository<T> implements Iterable<T> {
             System.arraycopy(bikes, 0, largerBikes, 0, bikes.length);
             bikes = (T[]) largerBikes;
         }
-        bikes[index++] = (T) bike;
+        bikes[index++] = bike;
     }
 
     @Override
@@ -30,7 +30,7 @@ public class BikeRepository<T> implements Iterable<T> {
 
             @Override
             public T next() {
-                return (T) bikes[current++];
+                return bikes[current++];
             }
 
             @Override
